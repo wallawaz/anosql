@@ -1,5 +1,6 @@
 import os
 
+from .adapters.mysql import MySQLDriverAdapter
 from .adapters.psycopg2 import PsycoPG2Adapter
 from .adapters.sqlite3 import SQLite3DriverAdapter
 from .exceptions import SQLLoadException, SQLParseException
@@ -14,6 +15,7 @@ from .patterns import (
 _ADAPTERS = {
     "psycopg2": PsycoPG2Adapter,
     "sqlite3": SQLite3DriverAdapter,
+    "mysql": MySQLDriverAdapter,
 }
 
 
